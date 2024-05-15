@@ -1,0 +1,24 @@
+{
+  "name": "chico-coins",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/chico-coins/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "chico-coins:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "chico-coins:build:development"
+        },
+        "production": {
+          "buildTarget": "chico-coins:build:production"
+        }
+      }
+    }
+  }
+}
